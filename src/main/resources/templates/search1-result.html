@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Search Result</h2>
+    <table>
+      <tr>
+        <th>So CMND</th>
+        <th>Ho Ten</th>
+        <th>Email</th>
+        <th>So Dien Thoai</th>
+        <th>Dia Chi</th>
+      </tr>
+      <tr>
+        <td th:text="${sinhVien.soCmnd}"></td>
+        <td th:text="${sinhVien.hoTen}"></td>
+        <td th:text="${sinhVien.email}"></td>
+        <td th:text="${sinhVien.soDt}"></td>
+        <td th:text="${sinhVien.diaChi}"></td>
+      </tr>
+    </table>
+  </body>
+</html>

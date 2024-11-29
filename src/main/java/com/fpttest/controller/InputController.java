@@ -37,7 +37,7 @@ public class InputController {
         model.addAttribute("nganhItems", nganhRepository.findAll());
     }
 
-    @PostMapping(value = "/input")
+    @PostMapping(value = "/inputSubmit")
     public String input(@ModelAttribute InputDto inputDto, Model model) {
         SinhVien sinhVien = new SinhVien(inputDto.getSoCmnd(), inputDto.getHoTen(),
                 inputDto.getEmail(), inputDto.getSoDt(), inputDto.getDiaChi());
