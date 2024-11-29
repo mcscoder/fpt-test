@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 public class InputDto {
     private String soCmnd;
     private String hoTen;
+    
     private String email;
     private String soDt;
     private String diaChi;

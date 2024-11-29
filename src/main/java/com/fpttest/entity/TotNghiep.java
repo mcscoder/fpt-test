@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,11 +29,11 @@ public class TotNghiep {
     @JoinColumn(name = "so_cmnd")
     private SinhVien sinhVien;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "ma_truong")
     private Truong truong;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "ma_nganh")
     private Nganh nganh;
 }
