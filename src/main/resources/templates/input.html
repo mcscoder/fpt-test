@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link th:href="@{/css/styles.css}" rel="stylesheet" />
+  </head>
+  <body>
+    <h2>User Form</h2>
+    <form
+      class="flex gap-2"
+      th:action="@{/input}"
+      th:object="${inputDto}"
+      method="post"
+    >
+      <div class="flex flex-col gap-2">
+        <label for="soCmnd">soCmnd</label>
+        <input type="text" id="soCmnd" th:field="*{soCmnd}" required />
+
+        <label for="hoTen">hoTen</label>
+        <input type="text" id="hoTen" th:field="*{hoTen}" />
+
+        <label for="email">email</label>
+        <input type="text" id="email" th:field="*{email}" />
+
+        <label for="soDt">soDt</label>
+        <input type="text" id="soDt" th:field="*{soDt}" />
+
+        <label for="diaChi">diaChi</label>
+        <input type="text" id="diaChi" th:field="*{diaChi}" />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label for="maTruong">maTruong</label>
+        <select name="maTruong" id="maTruong" th:field="*{maTruong}" required>
+          <option
+            th:each="truong : ${truongItems}"
+            th:value="${truong.maTruong}"
+            th:text="${truong.maTruong}"
+          ></option>
+        </select>
+
+        <label for="maNganh">maNganh</label>
+        <select name="maNganh" id="maNganh" th:field="*{maNganh}" required>
+          <option
+            th:each="nganh : ${nganhItems}"
+            th:value="${nganh.maNganh}"
+            th:text="${nganh.maNganh}"
+          ></option>
+        </select>
+
+        <label for="heTotNghiep">heTotNghiep</label>
+        <input type="text" id="heTotNghiep" th:field="*{heTotNghiep}" />
+
+        <label for="ngayTotNghiep">ngayTotNghiep</label>
+        <input type="text" id="ngayTotNghiep" th:field="*{ngayTotNghiep}" />
+
+        <label for="loaiTotNghiep">loaiTotNghiep</label>
+        <input type="text" id="loaiTotNghiep" th:field="*{loaiTotNghiep}" />
+
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+  </body>
+</html>
