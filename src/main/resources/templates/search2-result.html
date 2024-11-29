@@ -25,16 +25,18 @@
       <tr>
         <th>So CMND</th>
         <th>Ho Ten</th>
-        <th>Email</th>
-        <th>So Dien Thoai</th>
-        <th>Dia Chi</th>
+        <th>Ma Nganh</th>
+        <th>Ma Truong</th>
+        <th>Ten Cong Ty</th>
+        <th>Thoi Gian Lam Viec</th>
       </tr>
       <tr>
         <td th:text="${sinhVien.soCmnd}"></td>
         <td th:text="${sinhVien.hoTen}"></td>
-        <td th:text="${sinhVien.email}"></td>
-        <td th:text="${sinhVien.soDt}"></td>
-        <td th:text="${sinhVien.diaChi}"></td>
+        <td th:text="${congViec.maNganh}"></td>
+        <td th:text="${totNghiep.truong.maTruong}"></td>
+        <td th:text="${congViec.tenCongTy}"></td>
+        <td th:text="${congViec.thoiGianLamViec}"></td>
       </tr>
     </table>
   </body>

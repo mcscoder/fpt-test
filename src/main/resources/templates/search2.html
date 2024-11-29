@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    search2
-</body>
+  </head>
+  <body>
+    <h1>Tim kiem thong tin tot nghiep va viec lam cua Sinh Vien</h1>
+    <form th:action="@{/search2Submit}" th:object="${search2Dto}" method="post">
+      <label for="soCmnd">soCmnd</label>
+      <input type="text" id="soCmnd" th:field="*{soCmnd}" required />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
 </html>

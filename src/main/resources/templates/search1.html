@@ -6,6 +6,7 @@
     <title>Document</title>
   </head>
   <body>
+    <h1>Tim kiem thong tin Sinh Vien</h1>
     <form th:action="@{/search1Submit}" th:object="${search1Dto}" method="post">
       <label for="soCmnd">soCmnd</label>
       <input type="text" id="soCmnd" th:field="*{soCmnd}" required />
